@@ -1,3 +1,11 @@
+<?php
+    //cek apakah tidak ada data dari $_GET
+    if( !isset($_GET["nama"])){
+        //redirect
+        header("Location: get.php");
+        exit;
+    }
+?>
 <html>
     <body>
         <ul>
