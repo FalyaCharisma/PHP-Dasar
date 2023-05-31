@@ -13,6 +13,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="tambah.php">Tambah Data</a>
     <table border="1">
         <tr>
             <th>No</th>

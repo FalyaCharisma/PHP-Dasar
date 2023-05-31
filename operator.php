@@ -3,11 +3,11 @@
     // +, -, *, /, %
     $a = 5;
     $b = 2;
-    echo $a + $b;
-    // echo $a - $b;
-    // echo $a * $b;
-    // echo $a / $b;
-    // echo $a % $b;
+    echo $a + $b . "<br>";
+    echo $a - $b . "<br>";
+    echo $a * $b . "<br>";
+    echo $a / $b . "<br>";
+    echo $a % $b . "<br>";
 
     // Menggabungkan teks
     // .
@@ -15,7 +15,7 @@
     $nama_belakang = "Ayza";
     echo $nama_depan . " " . $nama_belakang;
 
-    // Operator Assignment
+    // Operator Assignment / Penugasan
     // =, +=, -=, *=, /=, %= .=
     $x = 1;
     $x += 5;
@@ -23,13 +23,13 @@
 
     // Operator Perbandingan
     // <, >, <=, >=, ==, !=
-    var_dump(2 == "2");
+    var_dump($a == $b);
 
     // Operator Identitas
     // ===, !==
     var_dump(2 === "2");
 
     // Operator Logika
-    // &&, ||
-    var_dump( 2 > 1 && 1 < 2);
+    // && and, || or
+    var_dump( 2 > 1 || 1 < 2);
 ?>
