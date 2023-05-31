@@ -20,6 +20,7 @@
             <th>Judul</th>
             <th>Tahun</th>
             <th>Harga</th>
+            <th>Aksi</th>
         </tr>
         <?php foreach($buku as $row): ?>
         <tr>
@@ -27,6 +28,7 @@
             <td><?php echo $row["judul"] ?></td>
             <td><?php echo $row["tahun_terbit"] ?></td>
             <td><?php echo $row["harga"] ?></td>
+            <td><a href="hapus.php?id=<?php echo $row["id"] ?>">hapus</a> || <a href="update.php?id=<?php echo $row["id"] ?>">update</a></td>
         </tr>
         <?php endforeach; ?>
     </table>
