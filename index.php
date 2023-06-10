@@ -1,7 +1,13 @@
 <?php
     require 'functions.php';
-    $buku = query("SELECT * FROM buku");
-  
+    $buku = query("SELECT * FROM buku ORDER BY id DESC");
+
+    if(isset($_POST["cari"])){
+        $keyword = $_POST["keyword"];
+        $buku = query("SELECT * FROM buku WHERE judul LIKE '%$keyword%' ORDER BY id DESC");
+     } else {
+        $buku = query("SELECT * FROM buku ORDER BY id DESC");
+     }
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +20,10 @@
 </head>
 <body>
     <a href="tambah.php">Tambah Data</a>
+    <form action="" method="post">
+        <input type="text" name="keyword">
+        <button type="submit" name="cari" placeholder="Masukkan keyword" autocomplete="off">Cari</button>
+    </form>
     <table border="1">
         <tr>
             <th>No</th>
